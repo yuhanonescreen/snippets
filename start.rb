@@ -1,5 +1,6 @@
-file_name = 'sum_sample.in'
-lines = File.read('sum_sample.in').split("\n")
+file_name = ENV['inputfile'] || 'sum_sample.in'
+puts file_name
+lines = File.read( file_name ).split("\n")
 num_lines = lines.shift.to_i
 
 results = lines.collect do |l|
